@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-  <main role="main">
+	<main role="main">
 	<section>
-	  <?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
 			<header>
 				<?php
@@ -11,27 +11,27 @@
 				?>
 			</header>
 
-	  <?php if (have_posts()) : ?>
-		  <?php while (have_posts()) : the_post(); ?>
+		<?php if (have_posts()) : ?>
+			<?php while (have_posts()) : the_post(); ?>
 
-		  <?php the_content() ?>
+			<?php the_content() ?>
 
 		<?php endwhile; ?>
 
-	  <?php else : ?>
+		<?php else : ?>
 
 		<article>
 
-		  <h2>Not Found</h2>
-		  <p><?php _e("Sorry, but you are looking for something that isn't here."); ?></p>
+			<h2>Not Found</h2>
+			<p><?php _e("Sorry, but you are looking for something that isn't here."); ?></p>
 
 		</article>
 
-	  <?php endif; ?>
+		<?php endif; ?>
 	</section>
 
 	<?php get_sidebar(); ?>
 
-  </main>
+	</main>
 
 <?php get_footer(); ?>

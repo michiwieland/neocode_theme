@@ -2,18 +2,18 @@
 
  <main>
 
-   <section class="content">
+	<section class="content">
 
-	  <?php if (have_posts()) : ?>
-		  <?php while (have_posts()) : the_post(); ?>
+		<?php if (have_posts()) : ?>
+			<?php while (have_posts()) : the_post(); ?>
 
 			<article>
 				<!-- post header -->
 				<header>
-				  <h2>
+					<h2>
 					<a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-				  </h2>
-				  <p>by <?php the_author(); ?></p>
+					</h2>
+					<p>by <?php the_author(); ?></p>
 				</header>
 
 				<!-- post thumbnail -->
@@ -28,41 +28,41 @@
 
 				<!-- comments -->
 				<?php
-		  			if ( comments_open() || get_comments_number() ) {
-		  				comments_template();
-		  			}
+						if ( comments_open() || get_comments_number() ) {
+							comments_template();
+						}
 				?>
 
 				<!-- post footer -->
 				<footer>
-				  <ul>
+					<ul>
 					<li>Title: <?php the_title(); ?></li>
 					<li>Posted: <?php the_time('l, d.m.Y') ?></li>
 					<li>Author: <?php the_author(); ?></li>
 					<li>Categories: <?php the_category(', '); ?></li>
 					<li>Comments: <?php if (comments_open( get_the_ID() ) ) comments_popup_link('Comment', '1 Comment', '% Comments'); ?></li>
-				  </ul>
+					</ul>
 				</footer>
 
 			</article>
 
-		  <?php endwhile; ?>
+			<?php endwhile; ?>
 
-	  <?php else : ?>
+		<?php else : ?>
 
 		<article>
 
-		  <h2>Not Found</h2>
-		  <p><?php _e("Sorry, but you are looking for something that isn't here."); ?></p>
+			<h2>Not Found</h2>
+			<p><?php _e("Sorry, but you are looking for something that isn't here."); ?></p>
 
 		</article>
 
-	  <?php endif; ?>
+		<?php endif; ?>
 
-  </section>
+	</section>
 
-  <!-- Load sidebar -->
-  <?php get_sidebar(); ?>
+	<!-- Load sidebar -->
+	<?php get_sidebar(); ?>
 
 </main>
 

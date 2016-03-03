@@ -54,9 +54,9 @@ function basic_theme_setup() {
 add_action( 'init', 'register_custom_nav_menu' );
 function register_custom_nav_menu() {
   register_nav_menus(array(
-      'header-menu' => __( 'Header Menu' ),
-      'footer-menu' => __( 'Footer Menu' )
-    )
+	  'header-menu' => __( 'Header Menu' ),
+	  'footer-menu' => __( 'Footer Menu' )
+	)
   );
 }
 
@@ -65,14 +65,14 @@ function register_custom_nav_menu() {
   */
 add_action( 'widgets_init', 'theme_slug_widgets_init' );
 function theme_slug_widgets_init() {
-    register_sidebar( array(
-        'name' => __( 'Main Sidebar', 'main-sidebar' ),
-        'id' => 'main-sidebar',
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
-    ) );
+	register_sidebar( array(
+		'name' => __( 'Main Sidebar', 'main-sidebar' ),
+		'id' => 'main-sidebar',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 
 

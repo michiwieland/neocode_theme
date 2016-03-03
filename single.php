@@ -26,6 +26,13 @@
                 <!-- post content -->
                 <?php the_content(); ?>
 
+                <!-- comments -->
+                <?php
+          			if ( comments_open() || get_comments_number() ) {
+          				comments_template();
+          			}
+                ?>
+
                 <!-- post footer -->
                 <footer>
                   <ul>

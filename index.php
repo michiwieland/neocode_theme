@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
- <main>
+ <main role="main">
 
    <section class="content">
      <h1>News</h1>
@@ -8,7 +8,7 @@
       <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
 
-            <article>
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <!-- post header -->
                 <header>
                   <h2>

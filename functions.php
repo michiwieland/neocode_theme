@@ -24,6 +24,10 @@ function basic_theme_setup() {
 
   // set basic images sizes (width, height, crop) -> use like the_post_thumbnail( 'name' );
   add_image_size( 'portfolio-image', 9999, 9999, true);
+  add_image_size( 'logo', 1200, 175, true );
+
+  // set default size for site logo
+  add_theme_support( 'site-logo', array( 'size' => 'logo' ) );
 
   // enable featured images
   add_theme_support( 'post-thumbnails' );
@@ -38,11 +42,11 @@ function basic_theme_setup() {
   // allows HTML5 markup
   add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 
+  add_theme_support( 'post-formats', array('aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat') );
+
   // enable the excerpt meta box in page edit screen
   add_post_type_support( 'page', 'excerpt' );
 }
-
-
 
 /**
   * Navigation
@@ -64,10 +68,10 @@ function theme_slug_widgets_init() {
     register_sidebar( array(
         'name' => __( 'Main Sidebar', 'main-sidebar' ),
         'id' => 'main-sidebar',
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-      	'after_widget'  => '</li>',
-      	'before_title'  => '<h2>',
-      	'after_title'   => '</h2>',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
     ) );
 }
 

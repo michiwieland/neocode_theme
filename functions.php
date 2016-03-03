@@ -7,6 +7,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 function enqueue_styles() {
   wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:400,700,900,300' );
   wp_enqueue_style( 'fontawesome', get_template_directory_uri() .'/incl/font-awesome/css/font-awesome.min.css', array(), '4.5.0' );
+  wp_enqueue_style( 'reset-style', get_template_directory_uri() .'/css/html5reset-1.6.1.css', array(), '1.6.1' );
   wp_enqueue_style( 'core-style', get_template_directory_uri() .'/style.css');
 }
 

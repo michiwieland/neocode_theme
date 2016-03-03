@@ -13,7 +13,6 @@
                   <h2>
                     <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                   </h2>
-                  <p>by <?php the_author(); ?></p>
                 </header>
 
                 <!-- post thumbnail -->

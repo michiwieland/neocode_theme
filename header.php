@@ -7,11 +7,7 @@
 		<meta name="description" content="<?php bloginfo(); ?>">
 
 		<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/img/faivicon.ico">
-
-		<!--[if lt IE 9]>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<![endif]-->
-
+		
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class( $class ); ?>>

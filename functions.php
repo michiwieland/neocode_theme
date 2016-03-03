@@ -15,6 +15,9 @@ add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 function enqueue_scripts() {
   wp_enqueue_script( 'jquery', get_template_directory_uri() .'/incl/jquery/jquery-2.2.1.min.js', '2.2.1');
 	wp_enqueue_script( 'main-js', get_template_directory_uri() .'/js/script.js', array('jquery'));
+
+  wp_enqueue_script( 'html5-shiv', '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js', array(), '3.7.3' );
+  wp_script_add_data( 'html5-shiv', 'conditional', 'lt IE 9' );
 }
 
 /**

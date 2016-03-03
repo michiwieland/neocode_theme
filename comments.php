@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying comments 
+ * The template for displaying comments
  *
  * @package WordPress
  * @subpackage neocode_theme
@@ -8,7 +8,7 @@
  */
 ?>
 <section>
-  <?php if ( have_comments() ) : ?>
+	<?php if ( have_comments() ) : ?>
 
 	<h1><?php comments_number(); ?></h1>
 		<ul>

@@ -13,7 +13,8 @@ function enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 function enqueue_scripts() {
-	wp_enqueue_script( 'main-js', get_template_directory_uri() .'/js/script.js');
+  wp_enqueue_script( 'jquery', get_template_directory_uri() .'/incl/jquery/jquery-2.2.1.min.js', '2.2.1');
+	wp_enqueue_script( 'main-js', get_template_directory_uri() .'/js/script.js', array('jquery'));
 }
 
 /**

@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying the main content
+ *
+ * @package WordPress
+ * @subpackage neocode_theme
+ * @since Neocode Theme 1
+ */
+
+get_header(); ?>
 
 	<main role="main">
 

@@ -1,3 +1,12 @@
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * @package WordPress
+ * @subpackage neocode_theme
+ * @since Neocode Theme 1
+ */
+?>
     <footer>
 
       <a href="<?php echo esc_url( __( 'https://neocode.ch/' ) ); ?>">NEOCODE</a>

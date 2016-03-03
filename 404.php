@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying 404 pages (not found)
+ *
+ * @package WordPress
+ * @subpackage neocode_theme
+ * @since Neocode Theme 1
+ */
+
+get_header(); ?>
 
 	<main role="main">
 	<section>

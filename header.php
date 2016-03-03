@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php
+/**
+ * The template for displaying the header
+ *
+ * @package WordPress
+ * @subpackage neocode_theme
+ * @since Neocode Theme 1
+ */
+
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
 	  <meta charset="<?php bloginfo( 'charset' ); ?>">

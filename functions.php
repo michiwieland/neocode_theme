@@ -1,4 +1,11 @@
 <?php
+/**
+ * Theme helping functions
+ *
+ * @package WordPress
+ * @subpackage neocode_theme
+ * @since Neocode Theme 1
+ */
 
 /**
  * Includes

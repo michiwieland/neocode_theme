@@ -10,7 +10,7 @@
 <section>
 	<?php if ( have_comments() ) : ?>
 
-	<h1><?php comments_number(); ?></h1>
+		<h1><?php comments_number(); ?></h1>
 		<ul>
 			<?php wp_list_comments(); ?>
 		</ul>

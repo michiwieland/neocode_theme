@@ -21,13 +21,13 @@
 	</head>
 	<body <?php body_class( $class ); ?>>
 	  <header>
-		  <a href="<?php echo home_url(); ?>">
-			  <img id="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo <?php bloginfo( 'name' ); ?>">
-		  </a>
-		 <h1><?php bloginfo( 'name' ); ?></h1>
-		<nav>
-		  <?php if ( has_nav_menu( 'header-menu' ) ) : ?>
-			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-		  <?php endif; ?>
-		</nav>
+			<a href="<?php echo home_url(); ?>">
+				<img id="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo <?php bloginfo( 'name' ); ?>">
+			</a>
+		 	<h1><?php bloginfo( 'name' ); ?></h1>
+			<nav>
+				<?php if ( has_nav_menu( 'header-menu' ) ) : ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+				<?php endif; ?>
+			</nav>
 	  </header>

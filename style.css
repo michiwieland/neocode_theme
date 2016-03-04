@@ -11,4 +11,13 @@ Tags:
 Text Domain: twentythirteen
 */
 
-main {display: block;}
+/*
+ * BROWSER COMPATIBILITY (remove if no longer needed)
+ *##############################################################################
+ */
+ main {display: block;}
+
+/*
+ * LAYOUT
+ *##############################################################################
+ */

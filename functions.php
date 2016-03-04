@@ -30,7 +30,8 @@ add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
  * @return void
  */
 function enqueue_scripts() {
-	wp_enqueue_script( 'jquery', get_template_directory_uri() .'/incl/jquery/jquery-2.2.1.min.js', '2.2.1' );
+	wp_enqueue_script( 'jquery', get_template_directory_uri() .'/incl/jquery/jquery-2.2.1.min.js', array(), '2.2.1' );
+	wp_enqueue_script( 'prefixfree', get_template_directory_uri() .'/incl/jquery/prefixfree.1.0.7.min.js', array(), '1.0.7' );
 	wp_enqueue_script( 'main-js', get_template_directory_uri() .'/js/script.js', array( 'jquery' ) );
 
 	wp_enqueue_script( 'html5-shiv', '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js', array(), '3.7.3' );

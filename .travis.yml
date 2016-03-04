@@ -1,6 +1,9 @@
 # Travis CI configuration file.
 # @link https://travis-ci.org/
-
+notifications:
+  slack:
+    on_success: never
+    on_failure: change
 # For use with the Twenty Sixteen WordPress theme
 # @link https://github.com/WordPress/twentysixteen/
 

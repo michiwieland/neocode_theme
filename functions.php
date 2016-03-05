@@ -30,7 +30,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
  * @return void
  */
 function enqueue_scripts() {
-	wp_enqueue_script("jquery");
+	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'prefixfree', get_template_directory_uri() .'/incl/jquery/prefixfree.1.0.7.min.js', array(), '1.0.7' );
 	wp_enqueue_script( 'main-js', get_template_directory_uri() .'/js/script.js', array( 'jquery' ) );
 
@@ -108,7 +108,7 @@ function register_custom_widget() {
 		'after_widget'	=> '</section>',
 		'before_title'	=> '<h2 class="widget-title">',
 		'after_title'	=> '</h2>',
-	  ));
+		));
 }
 
 /**

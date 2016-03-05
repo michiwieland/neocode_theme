@@ -22,9 +22,9 @@
 			<header id="header">
 				<div class="container">
 					<!-- LOGO -->
-					<?php if (get_theme_mod( 'custom_logo' ) ) : ?>
-						<a id="logo" rel='home' href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name') ); ?>'>
-							<img src='<?php echo esc_url( get_theme_mod( 'custom_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name') ); ?>'>
+					<?php if ( get_theme_mod( 'custom_logo' ) ) : ?>
+						<a id="logo" rel='home' href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>'>
+							<img src='<?php echo esc_url( get_theme_mod( 'custom_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>'>
 						</a>
 					<?php else : ?>
 						<h1><?php bloginfo( 'name' ); ?></h1>

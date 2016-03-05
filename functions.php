@@ -30,7 +30,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
  * @return void
  */
 function enqueue_scripts() {
-	wp_enqueue_script( 'jquery', get_template_directory_uri() .'/incl/jquery/jquery-2.2.1.min.js', array(), '2.2.1' );
+	wp_enqueue_script("jquery");
 	wp_enqueue_script( 'prefixfree', get_template_directory_uri() .'/incl/jquery/prefixfree.1.0.7.min.js', array(), '1.0.7' );
 	wp_enqueue_script( 'main-js', get_template_directory_uri() .'/js/script.js', array( 'jquery' ) );
 
@@ -51,10 +51,10 @@ function basic_theme_setup() {
 
 	// set basic images sizes (width, height, crop) -> use like the_post_thumbnail( 'name' );
 	add_image_size( 'portfolio-image', 9999, 9999, true );
-	add_image_size( 'logo', 1200, 175, true );
+	add_image_size( 'logo', 300, 60, true );
 
 	// set default size for site logo
-	add_theme_support( 'site-logo', array( 'size' => 'logo' ) );
+	add_theme_support( 'custom-logo', array( 'size' => 'logo' ) );
 
 	// enable featured images
 	add_theme_support( 'post-thumbnails' );
@@ -94,13 +94,13 @@ function register_custom_nav_menu() {
 /*
  * Sidebar
  */
-add_action( 'widgets_init', 'theme_slug_widgets_init' );
+add_action( 'widgets_init', 'register_custom_widget' );
 /**
- * Add theme slug widgets
+ * Add theme widgets
  *
  * @return void
  */
-function theme_slug_widgets_init() {
+function register_custom_widget() {
 	register_sidebar( array(
 		'name'		=> __( 'Main Sidebar', 'main-sidebar' ),
 		'id'		=> 'main-sidebar',
@@ -111,5 +111,9 @@ function theme_slug_widgets_init() {
 	  ));
 }
 
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/customizer.php';
 
 ?>

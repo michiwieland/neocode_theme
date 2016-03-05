@@ -7,7 +7,7 @@
  * @since Neocode Theme 1
  */
 ?>
-		<footer>
+		<footer id="footer">
 			<a href="<?php echo esc_url( __( 'https://neocode.ch/' ) ); ?>">NEOCODE</a>
 
 			<?php if ( has_nav_menu( 'footer-menu' ) ) : ?>

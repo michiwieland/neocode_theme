@@ -15,7 +15,7 @@ get_header(); ?>
 
 				<header>
 					<h1>
-						<?php printf( __( 'Search Results for: %s' ) '<span>' . esc_html( get_search_query() ) . '</span>' ); ?>
+						<?php printf( __( 'Search Results for: %s' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?>
 					</h1>
 				</header>
 
@@ -37,7 +37,7 @@ get_header(); ?>
 
 		  	<?php endif; ?>
 		</section>
-		
+
 		<?php get_sidebar(); ?>
 
 	</main>

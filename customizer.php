@@ -19,7 +19,7 @@ function custom_logo_customizer( $wp_customize ) {
 	$wp_customize->add_section( 'custom_logo_section' , array(
 		'title'				=> 'Logo',
 		'priority'		=> 30,
-		'description' => 'Upload a logo to replace the default site name'
+		'description' => 'Upload a logo to replace the default site name',
 		)
 	);
 	$wp_customize->add_setting( 'custom_logo' );
@@ -27,13 +27,13 @@ function custom_logo_customizer( $wp_customize ) {
 		$wp_customize,
 		'custom_logo',
 		array(
-			'label'			=> 'Logo',
-			'section'		=> 'custom_logo_section',
-			'settings' 	=> 'custom_logo',
-			'flex_width'  => true, // Allow any width, making the specified value recommended. False by default.
-	    'flex_height' => false, // Require the resulting image to be exactly as tall as the height attribute (default).
-	    'width'       => 300,
-	    'height'      => 60,
+			'label'				=> 'Logo',
+			'section'			=> 'custom_logo_section',
+			'settings' 		=> 'custom_logo',
+			'flex_width'	=> true, // Allow any width, making the specified value recommended. False by default.
+			'flex_height' => false, // Require the resulting image to be exactly as tall as the height attribute (default).
+			'width'			 	=> 300,
+			'height'			=> 60,
 		)
 	));
 

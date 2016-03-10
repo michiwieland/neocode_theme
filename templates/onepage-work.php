@@ -17,7 +17,7 @@ $args = array(
 			'key'	 => '_wp_page_template',
 			'value' => 'templates/onepage-work.php',
 		),
- ),
+	),
 );
 $custom_query = new WP_Query( $args );
 

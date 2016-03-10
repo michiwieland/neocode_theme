@@ -7,12 +7,10 @@
  * @since Neocode Theme 1
  */
 
-if ( is_active_sidebar( 'main-sidebar' )  ) : ?>
+if ( is_active_sidebar( 'main_sidebar' )  ) : ?>
 	<aside class="main-sidebar">
-	  <?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
-	  	<ul>
-	  		<?php dynamic_sidebar( 'main-sidebar' ); ?>
-	  	</ul>
-	  <?php endif; ?>
+		<ul>
+			<?php dynamic_sidebar( 'main_sidebar' ); ?>
+		</ul>
 	</aside>
 <?php endif; ?>

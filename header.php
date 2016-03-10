@@ -7,7 +7,8 @@
  * @since Neocode Theme 1
  */
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -18,13 +19,19 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class( $class ); ?>>
+
+			<!-- FULL SIZE BANNER -->
 		<section class="banner" >
+
+			<!-- MAIN HEADER -->
 			<header id="header">
+
 				<div class="container">
+
 					<!-- LOGO -->
 					<?php if ( get_theme_mod( 'custom_logo' ) ) : ?>
 						<a id="logo" rel='home' href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>'>
-							<img src='<?php echo esc_url( get_theme_mod( 'custom_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>'>
+							<img src='<?php echo wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'logo_size' )[0]; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>'>
 						</a>
 					<?php else : ?>
 						<h1><?php bloginfo( 'name' ); ?></h1>
@@ -39,4 +46,7 @@
 					<a class="nav-toggles" href="#"></a>
 				</div>
 			</header>
-		</section>
+		</section> <!-- END BANNER -->
+
+		<!-- MAIN CONTAINER -->
+		<main role="main" class="container">

@@ -7,12 +7,17 @@
  * @since Neocode Theme 1
  */
 ?>
-		<footer id="footer">
-			<a href="<?php echo esc_url( __( 'https://neocode.ch/' ) ); ?>">NEOCODE</a>
 
-			<?php if ( has_nav_menu( 'footer-menu' ) ) : ?>
-				<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
-			<?php endif; ?>
+		</main> <!-- END MAIN CONTAINER -->
+
+		<footer id="footer">
+			<div class="container">
+				<a href="<?php echo esc_url( 'https://neocode.ch/' ); ?>">NEOCODE</a>
+
+				<?php if ( has_nav_menu( 'footer-menu' ) ) : ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+				<?php endif; ?>
+			</div>
 		</footer>
 
 		<?php wp_footer(); ?>

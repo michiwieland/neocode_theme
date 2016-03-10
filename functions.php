@@ -71,22 +71,6 @@ function basic_theme_setup() {
 	add_post_type_support( 'page', 'excerpt' );
 }
 
-
-/*
- * Custom image sizes chooser
- */
-add_filter( 'image_size_names_choose', 'register_custom_sizes' );
-/**
- * Add custom logo
- *
- * @return void
- */
-function register_custom_sizes( $sizes ) {
-		return array_merge( $sizes, array(
-				'logo' => __( 'Logo' ),
-		) );
-}
-
 /*
  * Navigation
  */

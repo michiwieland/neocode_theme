@@ -10,7 +10,7 @@
 get_header(); ?>
 
 
-<section class="content">
+<main role="main" role="container">
 
 	<?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -67,7 +67,7 @@ get_header(); ?>
 
 	<?php endif; ?>
 
-</section>
+</main>
 
 <!-- Load sidebar -->
 <?php get_sidebar(); ?>

@@ -6,11 +6,13 @@
  * @subpackage neocode_theme
  * @since Neocode Theme 1
  */
+ ?>
 
-get_header(); ?>
+ <!-- Load header -->
+ <?php get_header(); ?>
 
-
-<main role="main" role="container">
+ <div class="inner">
+ 	<section class="content">
 
 	<?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -18,40 +20,34 @@ get_header(); ?>
 			<article>
 				<!-- post header -->
 				<header>
-					<h2>
+					<h1>
 						<a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-					</h2>
-					<p>by <?php the_author(); ?></p>
+					</h1>
 				</header>
 
 				<!-- post thumbnail -->
-				<?php if ( has_post_thumbnail() ) : ?>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-						<?php the_post_thumbnail(); ?>
-					</a>
-				<?php endif; ?>
+				<div class="post-content">
+						<!-- post thumbnail -->
+						<?php if ( has_post_thumbnail() ) : ?>
+							<div class="post-thumbnail">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+									<?php the_post_thumbnail('full'); ?>
+								</a>
+							</div>
+						<?php endif; ?>
 
-				<!-- post content -->
-				<?php the_content(); ?>
+						<!-- post content -->
+						<div class="post-text">
+							<?php the_content(); ?>
+						</div>
 
-				<!-- comments -->
-				<?php
-						if ( comments_open() || get_comments_number() ) {
-							comments_template();
-						}
-				?>
-
-				<!-- post footer -->
-				<footer>
-					<ul>
-						<li>Title: <?php the_title(); ?></li>
-						<li>Posted: <time datetime="<?php the_time( 'Y-m-d' ) ?>"><?php the_time( 'd.m.Y' ) ?></time></li>
-						<li>Author: <?php the_author(); ?></li>
-						<li>Categories: <?php the_category( ', ' ); ?></li>
-						<li>Comments: <?php if ( comments_open( get_the_ID() ) ) { comments_popup_link( 'Comment', '1 Comment', '% Comments' ); } ?></li>
-					</ul>
-				</footer>
-
+						<!-- comments -->
+						<?php
+								if ( comments_open() || get_comments_number() ) {
+									comments_template();
+								}
+						?>
+				</div>
 			</article>
 
 		<?php endwhile; ?>
@@ -67,10 +63,8 @@ get_header(); ?>
 
 	<?php endif; ?>
 
-</main>
-
-<!-- Load sidebar -->
-<?php get_sidebar(); ?>
+</section>
+</div>
 
 <!-- Load footer -->
 <?php get_footer(); ?>

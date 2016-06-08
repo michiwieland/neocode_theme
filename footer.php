@@ -10,13 +10,26 @@
 
 		</main> <!-- END MAIN CONTAINER -->
 
-		<footer id="footer">
-			<div class="container">
-				<a href="<?php echo esc_url( 'https://neocode.ch/' ); ?>">NEOCODE</a>
+		<!-- SOCIAL -->
+		<section id="social">
+			<a href="<?php echo esc_url( '' ); ?>"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+			<a href="<?php echo esc_url( '' ); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a href="<?php echo esc_url( '' ); ?>"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+			<a href="<?php echo esc_url( '' ); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+		</section>
 
-				<?php if ( has_nav_menu( 'footer-menu' ) ) : ?>
-					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
-				<?php endif; ?>
+		<footer>
+
+			<!-- WIDGETS -->
+			<?php get_sidebar(); ?>
+
+			<div class="inner">
+
+				<!-- SITE INFO -->
+				<small id="site-info"> &copy; <?php echo date('Y'); ?>  <a href="<?php echo esc_url( 'https://gioannamichel.ch/' ); ?>">GIOANNA MICHEL</a></small>
+
+				<!-- AUTHOR -->
+				<small><a id="author" rel="author" href="<?php echo esc_url( 'https://neocode.ch/' ); ?>">NEOCODE</a><small>
 			</div>
 		</footer>
 

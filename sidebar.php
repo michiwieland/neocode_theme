@@ -8,9 +8,9 @@
  */
 
 if ( is_active_sidebar( 'main_sidebar' )  ) : ?>
-	<aside class="main-sidebar">
-		<ul>
+	<aside>
+		<div class="inner">
 			<?php dynamic_sidebar( 'main_sidebar' ); ?>
-		</ul>
+		<div class="inner">
 	</aside>
 <?php endif; ?>

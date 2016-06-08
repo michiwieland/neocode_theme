@@ -6,22 +6,21 @@
  * @subpackage neocode_theme
  * @since Neocode Theme 1
  */
+?>
 
-get_header(); ?>
+<!-- Load header -->
+<?php get_header(); ?>
 
-<main role="main">
-	<section>
-		<header>
-			<h1>Fehler 404 – Die Seite wurde leider nicht gefunden.</h1>
-		</header>
+<div class="inner">
+	<section class="content">
+				<header>
+					<h1>Fehler 404 – Die Seite nicht gefunden.</h1>
+				</header>
+				<p>Die angeforderte Seite wurde leider nicht gefunden. Bitte verwenden Sie die folgende Suchform</p>
 
-		<p>Bitte verwenden Sie die folgende Suchform</p>
-
-		<?php get_search_form(); ?>
+				<?php get_search_form(); ?>
 	</section>
+</div>
 
-	<?php get_sidebar(); ?>
-
-</main>
-
+<!-- Load footer -->
 <?php get_footer(); ?>

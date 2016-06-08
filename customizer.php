@@ -7,8 +7,6 @@
  * @since Neocode Theme 1
  */
 
-
-
 add_action( 'customize_register', 'custom_logo_customizer' );
 /**
  * Custom logo
@@ -36,7 +34,6 @@ function custom_logo_customizer( $wp_customize ) {
 			'height'			=> 60,
 		)
 	));
-
 }
 
 ?>

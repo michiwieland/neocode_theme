@@ -8,10 +8,6 @@
  */
 ?>
 
-<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-	<div>
-		<label class="screen-reader-text" for="s">Search:</label>
-		<input type="text" value="" name="s" id="s" placeholder="Search" />
-		<input type="submit" value="Search" />
-	</div>
+<form class="search-form" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<input type="search" class="search-field" value="<?php echo get_search_query(); ?>" name="s" placeholder="Search" />
 </form>

@@ -20,33 +20,35 @@
 	</head>
 	<body <?php body_class( $class ); ?>>
 
-			<!-- FULL SIZE BANNER -->
-		<section class="banner" >
+	<!-- HEADER -->
+	<header>
+		<div class="inner">
 
-			<!-- MAIN HEADER -->
-			<header id="header">
+			<!-- LOGO -->
+			<a id="logo" href='<?php echo esc_url( home_url( '/' ) ); ?>'>
+				<img src='<?php echo get_template_directory_uri() . '/img/logo.svg';?>' alt='Logo <?php echo esc_attr( get_bloginfo( 'name' ) ); ?>'>
+			</a>
+		</div>
+	</header>
+	<!-- END HEADER -->
 
-				<div class="container">
+	<!-- NAVIGATION -->
+	<nav>
+		<div class="inner">
 
-					<!-- LOGO -->
-					<?php if ( get_theme_mod( 'custom_logo' ) ) : ?>
-						<a id="logo" rel='home' href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>'>
-							<img src='<?php echo wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'logo_size' )[0]; ?>' alt='<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>'>
-						</a>
-					<?php else : ?>
-						<h1><?php bloginfo( 'name' ); ?></h1>
-					<?php endif; ?>
+			<!-- MOBILE HAMBURGER -->
+			<i class="fa fa-bars hamburger" aria-hidden="true"></i>
 
-					<!-- NAVIGATION -->
-					<nav>
-						<?php if ( has_nav_menu( 'header-menu' ) ) : ?>
-							<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-						<?php endif; ?>
-					</nav>
-					<a class="nav-toggles" href="#"></a>
-				</div>
-			</header>
-		</section> <!-- END BANNER -->
+			<!-- MENU -->
+			<?php if ( has_nav_menu( 'header-menu' ) ) : ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+			<?php endif; ?>
 
-		<!-- MAIN CONTAINER -->
-		<main role="main" class="container">
+			<!-- SEARCH FORM -->
+			<?php get_search_form(); ?>
+
+		</div>
+	</nav>
+
+	<!-- CONTENT -->
+	<main>

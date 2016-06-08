@@ -6,17 +6,17 @@
  * @subpackage neocode_theme
  * @since Neocode Theme 1
  */
+ ?>
 
-get_header(); ?>
+ <!-- Load header -->
+ <?php get_header(); ?>
 
-	<main role="main">
-		<section>
+ <div class="inner">
+ 	<section class="content">
 		  <?php if ( have_posts() ) { } ?>
 
 				<header>
-					<h1>
-						<?php printf( __( 'Search Results for: %s' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?>
-					</h1>
+					<h1>Suchresultate für: <?php printf(esc_html( get_search_query() )); ?></h1>
 				</header>
 
 				<?php if ( have_posts() ) : ?>
@@ -30,16 +30,15 @@ get_header(); ?>
 
 					<article>
 
-					  <h2>Not Found</h2>
-					  <p><?php _e( "Sorry, but you are looking for something that isn't here." ); ?></p>
+					  <h2>Nichts gefunden</h2>
+					  <p>Sorry, für diesen Suchbegriff existieren leider keine Enträge</p>
 
 					</article>
 
 		  	<?php endif; ?>
-		</section>
+			</section>
 
-		<?php get_sidebar(); ?>
+		</div>
 
-	</main>
-
-<?php get_footer(); ?>
+		<!-- Load footer -->
+		<?php get_footer(); ?>
